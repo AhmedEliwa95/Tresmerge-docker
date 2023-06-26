@@ -29,7 +29,7 @@ mongoose.connect(URI)
 
 app.get('/' , (req,res)=> {
     redisClient.set('products' , 'Products...')
-    res.send('<h1>Hello Tresmerrge App from AWS EC2 Instance!</h1>')})
+    res.send('<h1>Hello Tresmerrge App from AWS EC2, using Docker Hub!</h1>')})
 
 app.get('/data' , async(req,res)=> {
     const product = await redisClient.get('products' )
